@@ -11,6 +11,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -19,14 +22,7 @@
     <![endif]-->
   </head>
   <body>
-      <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-                <h4 class="modal-title" id="myModalLabel"></h4>
-                </div>
-                <div class="modal-body">
+                <div id="modal-body" style="display:none;">
                     <h3>Enter chat URL:</h3>
                     <div class="input-group input-group-lg">
                       <span class="input-group-addon" id="sizing-addon1">http://coord.io/</span>
@@ -35,15 +31,38 @@
                 </div>
                 <div class="modal-footer">
               </div>
-          </div>
-        </div>
-      </div>
-    
+
+
     <div id="login-btn">
-      <a href="#" class="btn btn-lg btn-success" 
-        data-toggle="modal" 
-        data-target="#basicModal">HOST NOW</a>
+      <button type="button" name="button" onclick="testLogin()">Host Now</button>
     </div>
+
+    <!-- Authentication -->
+    <script>
+
+    var ref = new Firebase("https://glaring-fire-8593.firebaseio.com");
+    var authData = ref.getAuth();
+
+    function testLogin(){
+    if (authData) {
+      document.getElementById('modal-body').style.display = 'block';
+      console.log("User is logged in");
+      }
+       else {
+        ref.authWithOAuthPopup("twitter", function(error, authData) {
+          if (error) {
+            console.log("Login Failed!", error);
+            } else {
+      console.log("Authenticated successfully with payload:", authData);
+      document.getElementById('modal-body').style.display = 'block';
+      console.log(authData.twitter.displayName);
+      }
+      });
+        }
+      }
+
+
+  </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
