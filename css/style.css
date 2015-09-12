@@ -1,6 +1,20 @@
 /**CH01 - Resets**/
  /** CH02 - Color**/
+
+ .navbar-inverse {
+ 	background-color: #e74c3c;
+ 	border-color: #e74c3c;
+ }
+
+.navbar-inverse .navbar-brand {
+	color: black;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: black;
+}
  /**CH03 - Page Structure**/
+}
 
 #login-btn {
 	width: 70px ;
