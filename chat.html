@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Coord Chat</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.css' />
+
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
+
+    <!-- Firechat -->
+    <script src='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.js'></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <body onload="initChat(authData);">
+
+    <!-- Chat -->
+    <script>
+
+    var ref = new Firebase("https://glaring-fire-8593.firebaseio.com");
+    var chatRef = new Firebase('https://glaring-fire-8593.firebaseio.com/chat');
+    var authData = ref.getAuth();
+
+    username = authData.twitter.displayName;
+    console.log("New page\n" + username);
+    console.log(authData.uid);
+
+
+     function initChat(authData) {
+        var chat = new FirechatUI(chatRef, document.getElementById('firechat-wrapper'));
+            chat.setUser(authData.uid, username);
+      console.log("This is happening");
+      }
+
+
+</script>
+
+<div id='firechat-wrapper'></div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
