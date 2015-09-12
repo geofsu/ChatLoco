@@ -1,0 +1,152 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'serve' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.38
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'serve', null ]
+6 verbose cache add name=undefined spec="serve" args=["serve",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'serve',
+7 verbose parsed url   path: 'serve',
+7 verbose parsed url   href: 'serve' }
+8 silly lockFile b88fb872-serve serve
+9 verbose lock serve /home/fsugeographer/.npm/b88fb872-serve.lock
+10 silly lockFile b88fb872-serve serve
+11 silly lockFile b88fb872-serve serve
+12 verbose addNamed [ 'serve', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile f5f9b276-serve serve@
+15 verbose lock serve@ /home/fsugeographer/.npm/f5f9b276-serve.lock
+16 silly addNameRange { name: 'serve', range: '*', hasData: false }
+17 verbose request where is /serve
+18 verbose request registry https://registry.npmjs.org/
+19 verbose request id c68ba0b128525a26
+20 verbose url raw /serve
+21 verbose url resolving [ 'https://registry.npmjs.org/', './serve' ]
+22 verbose url resolved https://registry.npmjs.org/serve
+23 verbose request where is https://registry.npmjs.org/serve
+24 info trying registry request attempt 1 at 04:12:47
+25 http GET https://registry.npmjs.org/serve
+26 http 200 https://registry.npmjs.org/serve
+27 silly registry.get cb [ 200,
+27 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+27 silly registry.get     etag: '"5T3PTVQIYL9CT6PB4VW6NJ0NY"',
+27 silly registry.get     'content-type': 'application/json',
+27 silly registry.get     'cache-control': 'max-age=60',
+27 silly registry.get     'content-length': '14592',
+27 silly registry.get     'accept-ranges': 'bytes',
+27 silly registry.get     date: 'Sat, 12 Sep 2015 08:12:47 GMT',
+27 silly registry.get     via: '1.1 varnish',
+27 silly registry.get     age: '0',
+27 silly registry.get     connection: 'keep-alive',
+27 silly registry.get     'x-served-by': 'cache-ord1721-ORD',
+27 silly registry.get     'x-cache': 'MISS',
+27 silly registry.get     'x-cache-hits': '0',
+27 silly registry.get     'x-timer': 'S1442045567.252505,VS0,VE182',
+27 silly registry.get     vary: 'Accept' } ]
+28 silly addNameRange number 2 { name: 'serve', range: '*', hasData: true }
+29 silly addNameRange versions [ 'serve',
+29 silly addNameRange   [ '0.0.1',
+29 silly addNameRange     '0.0.2',
+29 silly addNameRange     '0.0.3',
+29 silly addNameRange     '0.0.4',
+29 silly addNameRange     '0.0.5',
+29 silly addNameRange     '1.0.0',
+29 silly addNameRange     '1.0.1',
+29 silly addNameRange     '1.0.2',
+29 silly addNameRange     '1.0.3',
+29 silly addNameRange     '1.1.0',
+29 silly addNameRange     '1.2.0',
+29 silly addNameRange     '1.3.0',
+29 silly addNameRange     '1.4.0' ] ]
+30 verbose addNamed [ 'serve', '1.4.0' ]
+31 verbose addNamed [ '1.4.0', '1.4.0' ]
+32 silly lockFile 41214fd0-serve-1-4-0 serve@1.4.0
+33 verbose lock serve@1.4.0 /home/fsugeographer/.npm/41214fd0-serve-1-4-0.lock
+34 silly lockFile d8ec0c06--npmjs-org-serve-serve-1-4-0-tgz https://registry.npmjs.org/serve/-/serve-1.4.0.tgz
+35 verbose lock https://registry.npmjs.org/serve/-/serve-1.4.0.tgz /home/fsugeographer/.npm/d8ec0c06--npmjs-org-serve-serve-1-4-0-tgz.lock
+36 verbose addRemoteTarball [ 'https://registry.npmjs.org/serve/-/serve-1.4.0.tgz',
+36 verbose addRemoteTarball   'e35f3ce6b42586b7f3ded7b5b0a31a01bb0e1005' ]
+37 info retry fetch attempt 1 at 04:12:47
+38 verbose fetch to= /tmp/npm-4091-QZIpDIpt/registry.npmjs.org/serve/-/serve-1.4.0.tgz
+39 http GET https://registry.npmjs.org/serve/-/serve-1.4.0.tgz
+40 http 200 https://registry.npmjs.org/serve/-/serve-1.4.0.tgz
+41 silly lockFile d8ec0c06--npmjs-org-serve-serve-1-4-0-tgz https://registry.npmjs.org/serve/-/serve-1.4.0.tgz
+42 silly lockFile d8ec0c06--npmjs-org-serve-serve-1-4-0-tgz https://registry.npmjs.org/serve/-/serve-1.4.0.tgz
+43 silly lockFile 41214fd0-serve-1-4-0 serve@1.4.0
+44 silly lockFile 41214fd0-serve-1-4-0 serve@1.4.0
+45 silly lockFile f5f9b276-serve serve@
+46 silly lockFile f5f9b276-serve serve@
+47 silly resolved [ { name: 'serve',
+47 silly resolved     version: '1.4.0',
+47 silly resolved     description: 'Simple command-line file / directory server built with connect',
+47 silly resolved     keywords: [ 'static', 'server', 'connect' ],
+47 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+47 silly resolved     preferGlobal: true,
+47 silly resolved     homepage: 'https://github.com/visionmedia/serve',
+47 silly resolved     repository: { type: 'git', url: 'https://github.com/visionmedia/serve.git' },
+47 silly resolved     dependencies:
+47 silly resolved      { connect: '2.3.x',
+47 silly resolved        stylus: '*',
+47 silly resolved        jade: '*',
+47 silly resolved        'less-middleware': '*',
+47 silly resolved        commander: '0.6.1' },
+47 silly resolved     bin: { serve: './bin/serve' },
+47 silly resolved     bugs: { url: 'https://github.com/visionmedia/serve/issues' },
+47 silly resolved     _id: 'serve@1.4.0',
+47 silly resolved     dist:
+47 silly resolved      { shasum: 'e35f3ce6b42586b7f3ded7b5b0a31a01bb0e1005',
+47 silly resolved        tarball: 'http://registry.npmjs.org/serve/-/serve-1.4.0.tgz' },
+47 silly resolved     _from: 'serve@',
+47 silly resolved     _npmVersion: '1.4.4',
+47 silly resolved     _npmUser: { name: 'tjholowaychuk', email: 'tj@vision-media.ca' },
+47 silly resolved     maintainers: [ [Object] ],
+47 silly resolved     directories: {},
+47 silly resolved     _shasum: 'e35f3ce6b42586b7f3ded7b5b0a31a01bb0e1005',
+47 silly resolved     _resolved: 'https://registry.npmjs.org/serve/-/serve-1.4.0.tgz' } ]
+48 info install serve@1.4.0 into /usr/lib
+49 info installOne serve@1.4.0
+50 verbose lib/node_modules/serve unbuild
+51 verbose tar unpack /home/fsugeographer/.npm/serve/1.4.0/package.tgz
+52 silly lockFile e6bae2eb-tar-usr-lib-node-modules-serve tar:///usr/lib/node_modules/serve
+53 verbose lock tar:///usr/lib/node_modules/serve /home/fsugeographer/.npm/e6bae2eb-tar-usr-lib-node-modules-serve.lock
+54 silly lockFile 80fdff4b-pher-npm-serve-1-4-0-package-tgz tar:///home/fsugeographer/.npm/serve/1.4.0/package.tgz
+55 verbose lock tar:///home/fsugeographer/.npm/serve/1.4.0/package.tgz /home/fsugeographer/.npm/80fdff4b-pher-npm-serve-1-4-0-package-tgz.lock
+56 silly gunzTarPerm modes [ '775', '664' ]
+57 error Error: EACCES, mkdir '/usr/lib/node_modules/serve'
+57 error  { [Error: EACCES, mkdir '/usr/lib/node_modules/serve']
+57 error   errno: 3,
+57 error   code: 'EACCES',
+57 error   path: '/usr/lib/node_modules/serve',
+57 error   fstream_type: 'Directory',
+57 error   fstream_path: '/usr/lib/node_modules/serve',
+57 error   fstream_class: 'DirWriter',
+57 error   fstream_stack:
+57 error    [ '/usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+57 error      '/usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+57 error      'Object.oncomplete (fs.js:108:15)' ] }
+58 error Please try running this command again as root/Administrator.
+59 error System Linux 3.19.0-21-generic
+60 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "serve"
+61 error cwd /home/fsugeographer/Documents/coord
+62 error node -v v0.10.38
+63 error npm -v 1.4.28
+64 error path /usr/lib/node_modules/serve
+65 error fstream_path /usr/lib/node_modules/serve
+66 error fstream_type Directory
+67 error fstream_class DirWriter
+68 error code EACCES
+69 error errno 3
+70 error stack Error: EACCES, mkdir '/usr/lib/node_modules/serve'
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+71 error fstream_stack /usr/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+71 error fstream_stack Object.oncomplete (fs.js:108:15)
+72 verbose exit [ 3, true ]
