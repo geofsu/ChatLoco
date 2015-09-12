@@ -11,7 +11,7 @@ body {
 
 .form-signin {
   max-width: 380px;
-  padding: 15px 35px 45px;
+  padding: 15px 15px 15px;
   margin: 0 auto;
   background-color: #fff;
   border: 1px solid rgba(0,0,0,0.1);  
@@ -37,15 +37,4 @@ body {
 		}
 	}
 
-	input[type="text"] {
-	  margin-bottom: -1px;
-	  border-bottom-left-radius: 0;
-	  border-bottom-right-radius: 0;
-	}
-
-	input[type="password"] {
-	  margin-bottom: 20px;
-	  border-top-left-radius: 0;
-	  border-top-right-radius: 0;
-	}
 }
