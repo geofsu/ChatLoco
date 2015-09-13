@@ -16,7 +16,6 @@ startChat(room)
 function getUrl(){
   var newUrl = (document.getElementById('urlName').value);
   console.log(newUrl);
-  testLogin();
   window.open("#"+newUrl,"_self");
   clearInit();
   startChat(newUrl);
@@ -27,7 +26,6 @@ function startChat(room){
   messagesRef.child(room).limitToLast(10).on('child_added', function (snapshot) {
      //GET DATA
      var data = snapshot.val();
-     console.log ("8===>" + data);
      var username = data.name;
      var message = (" " + data.text);
      console.log("HIII" + message);
