@@ -17,6 +17,22 @@
     <!-- Firebase -->
     <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
 
+    <!-- Takes away init if hashtag exists -->
+    <script>
+
+      function hashTest(topPathName){
+      for (var e = 0; e < topPathName.length; e++)
+      {if (topPathName[e] === '#')
+      return true;
+    }
+}
+      var topPathName=window.location.href;
+
+
+
+
+    </script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,7 +72,9 @@
   </nav>
   </head>
   <body>
+<script>
 
+</script>
     <script>
     $(document).ready(function(){
     $('#urlName').keypress(function(e){
@@ -66,6 +84,8 @@
     });
     </script>
 
+
+<div id="initial" style="display: none;">
         <div id="login-btn">
           <button type="button" name="button" onclick="testLogin()">Host Now</button>
         </div>
@@ -73,8 +93,8 @@
                     <h3>Enter chat URL:</h3>
 
                     <div class="input-group input-group-lg">
-                      <span class="input-group-addon" id="sizing-addon1">http://coord.io/</span>
-                      <input type="text" class="form-control" placeholder="mhacks6" id='urlName' aria-describedby="sizing-addon1" />
+                      <span class="input-group-addon" id="sizing-addon1">http://coord.io/#</span>
+                      <input type="text" class="form-control" placeholder="mhacks6..." id='urlName' aria-describedby="sizing-addon1" />
                       <button type="button" id="subber" onclick="getUrl()">Submit</button>
 
 
@@ -84,12 +104,48 @@
                         console.log(newUrl);
                         testLogin();
                         window.open("#"+newUrl,"_self");
+                        clearInit();
                       }
                       </script>
                     </div>
                 </div>
                 <div class="modal-footer">
               </div>
+</div>
+
+
+
+<div id="newShiz" style="display: none;">
+  <!-- EMPTY MESSAGE LIST -->
+<ul id='messages' class="example-chat-messages"></ul>
+
+<!-- MESSAGE INPUT FIELD -->
+<footer>
+  <i class="fa fa-comment-o icon-chat"></i>
+  <input type='text' id='new-message'  placeholder='Type a message...'>
+</footer>
+</div>
+
+<script>
+if(!hashTest(topPathName))
+$('#initial').show();
+</script>
+<script>
+if(hashTest(topPathName))
+{
+  console.log("LEEDLE");
+  $('#initial').remove();
+  $('#newShiz').show();
+}
+</script>
+
+<script>
+  function clearInit(){
+    $('#initial').remove();
+    $('#newShiz').show();
+  }
+</script>
+
 
 
 
@@ -129,5 +185,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="/js/chat.js"></script>
   </body>
 </html>
