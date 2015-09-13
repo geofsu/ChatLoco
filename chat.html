@@ -10,7 +10,6 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link rel='stylesheet' href='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.css' />
 
     <!-- jQuery -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
@@ -18,8 +17,7 @@
     <!-- Firebase -->
     <script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
 
-    <!-- Firechat -->
-    <script src='https://cdn.firebase.com/libs/firechat/2.0.1/firechat.min.js'></script>
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -67,35 +65,25 @@
 
 <body>
 
-    <body onload="initChat(authData);">
 
-    <!-- Chat -->
-    <script>
+  <!-- EMPTY MESSAGE LIST -->
+<ul id='messages' class="example-chat-messages"></ul>
 
-    var ref = new Firebase("https://glaring-fire-8593.firebaseio.com");
-    var chatRef = new Firebase('https://glaring-fire-8593.firebaseio.com/chat');
-    var authData = ref.getAuth();
-
-    username = authData.twitter.displayName;
-    console.log("New page\n" + username);
-    console.log(authData.uid);
+<!-- MESSAGE INPUT FIELD -->
+<footer>
+  <i class="fa fa-comment-o icon-chat"></i>
+  <input type='text' id='new-message'  placeholder='Type a message...'>
+</footer>
+</div>
 
 
-     function initChat(authData) {
-        var chat = new FirechatUI(chatRef, document.getElementById('firechat-wrapper'));
-            chat.setUser(authData.uid, username);
-      console.log("This is happening");
-      }
 
-
-</script>
-
-<div id='firechat-wrapper'></div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="/js/chat.js"></script>
 </body>
 </html>
