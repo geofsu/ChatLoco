@@ -16,10 +16,10 @@
  /**CH03 - Page Structure**/
 }
 
-#login-btn {
-	width: 70px ;
-  	margin-left: auto ;
-  	margin-right: auto ;
+.login-btn {
+	width: 200px ;
+  	margin: auto;
+  	text-align: center;
 }
 
 .example-chat-messages {
@@ -31,6 +31,12 @@
   margin:auto;
   padding:10px;
 }
+
+.jumbotron {
+	width: 100%;
+	height: 100%;
+}
+
 
 
 
