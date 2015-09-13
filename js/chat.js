@@ -5,6 +5,7 @@ var message = ('messages');
 console.log("refresh");
 var $newMessage = $('#new-message');
 var $username = authData.twitter.displayName;
+var $profilePic = authData.twitter.profileImageURL;
 var $messages = $('#messages');
 
 var room = window.location.hash.slice(1);
@@ -26,12 +27,13 @@ function startChat(room){
   messagesRef.child(room).limitToLast(10).on('child_added', function (snapshot) {
      //GET DATA
      var data = snapshot.val();
+     var profilePic = data;
      var username = data.name;
      var message = (" " + data.text);
      console.log("HIII" + message);
 
      //CREATE ELEMENTS MESSAGE & SANITIZE TEXT
-     var messageElement = $("<li>");
+     var messageElement = $("<ul>");
      var nameElement = $("<strong class='example-chat-username'></strong>");
      nameElement.text(username);
      messageElement.text(message).prepend(nameElement);
@@ -56,6 +58,7 @@ function startChat(room){
    $newMessage.keypress(function (e) {
      // GET FIELD VALUES
      var username = $username;
+     var profilePic = $profilePic;
      var message = $newMessage.val().trim();
 
      console.log('===========', username, message);

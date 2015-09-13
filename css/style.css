@@ -22,6 +22,16 @@
   	margin-right: auto ;
 }
 
+.example-chat-messages {
+  font-size: 24pt;
+}
+
+.messagingBox {
+  width:60%;
+  margin:auto;
+  padding:10px;
+}
+
 
 
  /**CH04 - Header & Navigation**/
@@ -29,5 +39,3 @@
 
  /**CH06 - Footer**/
  /**CH07 - Miscellaneous**/
-
-
