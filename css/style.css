@@ -24,6 +24,7 @@
 
 .example-chat-messages {
   font-size: 24pt;
+  color: #fff;
 }
 
 .messagingBox {
@@ -37,8 +38,32 @@
 	height: 100%;
 }
 
+#initial{
+	width: 100%;
+	text-align: center;
+}
 
 
+body {
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.btn {
+	color: #E15944;
+	background-color: #ffffff
+
+}
+
+.messagingBox{
+	padding-top: 10%;
+
+}
+
+h1{
+	color: #fff;
+	font-size: 72pt;
+}
 
  /**CH04 - Header & Navigation**/
  /**CH05 - Content & Media**/
